@@ -1,0 +1,55 @@
+ <!-- Login Section -->
+ <section class="login_page_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12">
+                <div class="login_content login_content_2">
+                    <h2>Registrate</h2>
+                    <p>Elija uno de los siguientes métodos de registro</p>
+                    <div class="login_btn">
+                        <a class="fac" href="#"><i class="twi-facebook-f"></i>Usar Facebook</a>
+                        <a class="goo" href="#"><i class="twi-google-plus-g"></i>Usar Google +</a>
+                    </div>
+                    <p class="bold">Regístrate utilizando tu correo electrónico</p>
+
+                    <form action="#" method="post" class="row"  [formGroup]="registerForm" >
+                        <div class="col-lg-6 col-md-6">
+                            <input type="text" formControlName="nombre" placeholder="Nombres"/>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <input type="text"formControlName="apellido" placeholder="Apellidos"/>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <input type="email" formControlName="correo"placeholder="Dirección de correo electrónico"/>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <input type="password" formControlName="contraseña"placeholder="Ingresa tu contraseña"/>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <p><i class="twi-shield-alt"></i> Tus Contraseñas están cifradas y seguras.</p>
+                            <div class="radio_btn">
+                                <input type="radio" id="remember" name="password" value="password">
+                                <label for="remember">Me gustaría recibir boletines semanales y mensuales de la empresa.</label>
+                            </div>
+                            <h6>¿Ya eres usuario? <a href="acceso">Iniciar Sesión</a></h6>
+                        </div>
+
+                        <div class="col-lg-5 col-md-5">
+                            <input type="submit" (click)="__onSubmitRegister()" value="Registrarse"/>
+                            <p class="register">
+                                Al registrarte confirmas que aceptas los
+                                <a target="_blank" routerLink="/terminos-condiciones">Términos y Condiciones</a> y <a target="_blank" routerLink="/aviso-proteccion">Política de Privacidad</a>
+                            </p>
+                        </div>
+                        <div class="form-group">
+                                <p>Datos del formulario: {{registerForm.value  | json}}</p>
+                                <p> Formulario Valido: {{registerForm.valid  }}   </p>
+                             </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login Section -->
